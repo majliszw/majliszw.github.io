@@ -1,0 +1,46 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * main sections
+ */
+
+#header, #headerbar, #footer {margin:0;}
+
+#footer {padding:10px;}
+
+#toolbar {color:#fff;}
+
+/* 
+*#page {background:#0B0B0B url(../images/pattern2.png);}
+*/
+#page {background:#FFFFFF;}
+
+#block-main, #block-top-a, #block-top-b {background:#fff;}
+
+#block-header, #block-bottom {background:#10151C url(../images/pattern.png);}
+
+#block-menu{background:#5AAB52;}
+/*
+* #block-footer, #block-top {background:#5AAB52 url(../images/pattern2.png); border-top: 1px solid #181F28;}
+*/
+#block-footer, #block-top {background:#5AAB52; border-top: 1px solid #181F28;}
+
+#block-menu {border-top: 0px solid #1B212A; border-bottom:1px solid #000;}
+
+#block-header, #block-bottom{border-bottom: 1px solid #000000;}
+
+#bottom-a, #bottom-b, #footer, #toolbar, #headerbar {color:#FFFFFF;}
+
+#bottom-a .mod-box, #bottom-b .mod-box {border:4px double transparent; border-top: 1px solid #202831;}
+
+#bottom-a .mod-box h3, #bottom-b .mod-box h3 {color:#ddd;}
+
+#menu {color: #AFAFAF;}
+
+#bottom-b .mod-box, #bottom-a .mod-box {background:#0b1015 url(../images/gradient_02.jpg) repeat-x;}
+
+#logo p {margin:0;}
+
+
+
+
