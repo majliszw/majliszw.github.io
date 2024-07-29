@@ -11,7 +11,7 @@ body {
 	color: #000;
 }
 
-a { color: #48b; }
+a { color: rgb(255, 255, 255); }
 
 a:hover,
 em, code { color: #d50; }
