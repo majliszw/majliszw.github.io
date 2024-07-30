@@ -25,3 +25,12 @@
 .green-button:hover a {
 	color: #f7f3e7; 
 }
+
+.black-link {
+	color: black
+}
+
+.black-link:hover{
+	color: black;
+	font-weight: bold;
+}
