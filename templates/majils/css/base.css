@@ -11,10 +11,11 @@ body {
 	color: #000;
 }
 
-a { color: rgb(0, 0, 0); }
+a { color: #f7f3e7;}
 
 a:hover,
-em, code { color: #d50; }
+em, code { color: #f7f3e7;
+			font-weight: bold; }
 
 ins, mark { background-color: #ffa; }
 mark { color: #444; }
@@ -26,8 +27,10 @@ pre {
 	background: #fafafa;
 }
 
-h1, h2, h3, h4, h5, h6 {color:#0B9E0D; border-bottom:1px solid #1BCD53; padding-bottom:5px;}
+h1, h2, h3, h5, h6 { color:#50705b; border-bottom:1px solid #728b78; padding-bottom:5px; }
 
-::-moz-selection { background: #39f; color: #fff; }
-::selection { background: #0B9E0D; color: #fff; }
+h4 { color:#f7f3e7; border-bottom:1px solid #728b78; padding-bottom:5px; }
+
+::-moz-selection { background: #728b78; color: #f7f3e7; }
+::selection { background: #728b78; color: #f7f3e7; }
 

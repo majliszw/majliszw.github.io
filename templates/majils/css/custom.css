@@ -11,23 +11,31 @@
 #toolbar {color:#fff;}
 
 /* 
-*#page {background:#0B0B0B url(../images/pattern2.png);}
+#page {background:#0B0B0B url(../images/pattern2.png);}
 */
-#page {background:#FFFFFF;}
+#page {background:#f7f3e7;}
 
-#block-main, #block-top-a, #block-top-b {background:#fff;}
+#block-main, #block-top-a, #block-top-b {background:#f7f3e7;}
 
-#block-header, #block-bottom {background:#10151C url(../images/pattern.png);}
+#block-header, #block-bottom {
+    background: #50705b url(/images/majlis_bg_pattern.svg);
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    background-size: 160px 160px; /* Keeps the original size of the pattern image */
+    background-position: top left; /* Positions the pattern at the top left of the element */
+    background-attachment: fixed; /* The background scrolls with the content */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+}
 
-#block-menu{background:#5AAB52;}
+#block-menu{background:#50705b;}
 /*
 * #block-footer, #block-top {background:#5AAB52 url(../images/pattern2.png); border-top: 1px solid #181F28;}
 */
-#block-footer, #block-top {background:#5AAB52; border-top: 1px solid #181F28;}
+#block-footer, #block-top {background:#50705b; border-top: 1px solid #f7f3e7;}
 
-#block-menu {border-top: 0px solid #1B212A; border-bottom:1px solid #000;}
+#block-menu {border-top: 0px solid #f7f3e7; border-bottom:1px solid #f7f3e7;}
 
-#block-header, #block-bottom{border-bottom: 1px solid #000000;}
+#block-header, #block-bottom{border-bottom: 1px solid #728b78;}
 
 #bottom-a, #bottom-b, #footer, #toolbar, #headerbar {color:#FFFFFF;}
 

@@ -104,7 +104,10 @@
 	#header-responsive .logo,
 	#header-responsive .searchbox {
 		display: inline-block;
-		width: 45%;
+		width: 70%;
+		padding-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 3%;
 		vertical-align: middle;
 	}
 
