@@ -11,7 +11,7 @@
 	border: none; 
 	border-radius: 6px; 
 	display: block;
-	text-align: center;
+	text-align: left;
 	text-decoration: none;
 	font-size: 18px; 
 	font-weight: bold;
@@ -33,4 +33,136 @@
 .black-link:hover{
 	color: black;
 	font-weight: bold;
+}
+
+.wrapper { max-width: 980px; }
+#sidebar-b { width: 25%; }
+#maininner { width: 75%; }
+#menu .dropdown { width: 250px; }
+#menu .columns2 { width: 500px; }
+#menu .columns3 { width: 750px; }
+#menu .columns4 { width: 1000px; }
+/* Add styles for the responsive header and menu toggle */
+#header-responsive {
+    display: none; /* Initially hide the responsive header */
+}
+
+.menu-toggle {
+	border: 1px solid #728b78;
+	background-color: #50705b;
+	padding: 10px;
+	margin: 10px;
+	align-items: flex-end;
+    display: none; /* Hide the toggle button by default */
+    flex-direction: row;
+    cursor: pointer;
+	width: 30px;
+	height: 100%;
+	z-index: 1000;
+}
+
+.bar {
+    height: 2px;
+    width: 30px;
+    background-color: #f7f3e7;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Styles for mobile view */
+@media (max-width: 767px) {
+    /* Ensure dropdowns span the full width of the screen */
+    .menu-dropdown .dropdown {
+        top: 0;
+        border-top: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    /* Menu widths */
+    #menu .dropdown { width: 100%; }
+    #menu .columns2 { width: 100%; }
+    #menu .columns3 { width: 100%; }
+    #menu .columns4 { width: 100%; }
+    
+    #sidebar-b { width: 100%; }
+    #maininner { width: 100%; }
+
+    /* Header styling */
+	
+    #header-responsive {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: space-between; /* Ensure logo and menu toggle are on opposite ends */
+        width: 100%;
+        padding: 0px 0px; /* Adjust padding as needed */
+        
+        position: relative; /* Ensures menu is positioned absolutely within this container */
+    }
+
+    /* Menu toggle button styling */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    /* Menu styling */
+    .menu-responsive {
+        display: none;
+        flex-direction: row;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Position below the header */
+    	left: 20%;
+        z-index: 999; /* Ensure it's below the toggle button */
+		background-color: #50705b;
+		border: 1px solid #728b78;
+    }
+
+    .menu-responsive.active {
+        display: flex; /* Show menu when active class is added */
+    }
+
+	.menu-responsive span {
+        display: flex; /* or another appropriate display property */
+		flex-direction: row;
+		width: 100%;
+		right: 0;
+
+
+	}
+
+    /* Menu item styling */
+    .menu-responsive a {
+        color: #f7f3e7;
+		background-color: #50705b;
+        padding: 0px;
+        text-align: left;
+        display: block;
+        font-size: 20px; /* Increase font size for mobile */
+        text-decoration: none;
+    }
+
+  
+
+	.menu-dropdown a.level2, .menu-dropdown span.level2 {
+		background-color: #f7f3e7;
+		color: #50705b;
+		left: 70px;
+		}
+	.menu-dropdown,
+	.menu-dropdown .level1,
+	.menu-dropdown .level1 > span { float: none ; }
 }

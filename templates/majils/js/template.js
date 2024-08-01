@@ -70,12 +70,32 @@
 		valid: function() {
 			var header = $('#header-responsive');
 			if (!header.length) {
+				// Create the responsive 
 				header = $('<div id="header-responsive"/>').prependTo('#header');
+	
+				// Clone and append the logo to the responsive header
 				$('#logo').clone().removeAttr('id').addClass('logo').appendTo(header);
-				$('.searchbox').first().clone().removeAttr('id').appendTo(header);
-				$('#menu').responsiveMenu().next().addClass('menu-responsive').appendTo(header);
+
+				// Create and append the menu toggle button
+				var menuToggle = $('<div id="menu-toggle" class="menu-toggle">'
+					+ '<span class="bar"></span>'
+					+ '<span class="bar"></span>'
+					+ '<span class="bar"></span>'
+					+ '</div>');
+				menuToggle.appendTo(header);
+	
+				// Clone and transform the menu for the responsive header
+				var menu = $('#menu').clone().removeAttr('id').addClass('menu-responsive').appendTo(header);
+	
+				// Add event listener for the menu toggle button
+				menuToggle.on('click', function() {
+					menu.toggleClass('active');
+				});
 			}
 		}
 	});
+	
+
+
 
 })(jQuery);
