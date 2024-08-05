@@ -66,7 +66,8 @@
 		}
 	});
 
-	$.onMediaQuery('(max-width: 767px)', {
+	
+	/*$.onMediaQuery('(max-width: 767px)', {
 		valid: function() {
 			var header = $('#header-responsive');
 			if (!header.length) {
@@ -94,7 +95,7 @@
 			}
 		}
 	});
-	
+	*/
 
 
 

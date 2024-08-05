@@ -58,7 +58,7 @@
     cursor: pointer;
 	width: 30px;
 	height: 100%;
-	z-index: 1000;
+
 }
 
 .bar {
@@ -107,7 +107,6 @@
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        z-index: 1000; /* Ensure it's above other elements */
     }
 
     .bar {
@@ -126,7 +125,7 @@
         position: absolute;
         top: 100%; /* Position below the header */
     	left: 20%;
-        z-index: 999; /* Ensure it's below the toggle button */
+        z-index: 800; /* Ensure it's below the toggle button */
 		background-color: #50705b;
 		border: 1px solid #728b78;
     }
@@ -165,4 +164,279 @@
 	.menu-dropdown,
 	.menu-dropdown .level1,
 	.menu-dropdown .level1 > span { float: none ; }
+}
+
+
+
+/*mobile menu stuff */
+
+
+
+/* Ensures the body acts as a reference point for absolutely positioned elements */
+body {
+  margin: 0;
+}
+
+.mobilemenu {
+  display: none;
+  position: absolute; /* Use absolute position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #50705b;
+  overflow: hidden;
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 0; /* Reset on mobile to be dynamically set by JavaScript */
+  }
+  .mobilemenu {
+      display: block;
+  }
+}
+
+#nav-m {
+  position: fixed; /* Ensure nav-m is positioned correctly within the absolute mobilemenu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Specify a height if needed */
+  background: #50705b url(/images/majlis_bg_pattern.svg);
+  background-repeat: repeat;
+  background-size: 30%;
+  background-position: top left;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.menum-container {
+  position: static;
+  transform: translateX(0);
+  transition: transform 0.1s ease-out;
+}
+
+.view-submenum .menum-container {
+  transform: translateX(-100%);
+}
+
+.mobilemenu ul {
+  margin-top: 0px;
+  position: absolute;
+  top: 0px;
+  padding: 0px;
+  width: 100%;
+  height: calc(568px - 60px);
+  background-color: #50705b;
+  border: 1px solid #728b78;
+  list-style-type: none;
+}
+
+.mobilemenu li a {
+  opacity: 1;
+  display: block;
+  margin: 0px 45px 0% 45px;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  color: #f7f3e7;
+  background-color: #50705b;
+  border: 1px solid #728b78;
+  transition: opacity 0.1s 0.1s ease-out, transform 0.1s 0.1s ease-out;
+}
+
+.mobilemenu li a:hover {
+  font-weight: bold;
+}
+
+.mobilemenu li.has-children:hover span:after {
+  font-weight: bold;
+  border-bottom: 2px solid #f7f3e7;
+  border-right: 2px solid #f7f3e7;
+}
+
+li.has-children span {
+  position: relative;
+  margin: auto;
+}
+
+li.has-children span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50px;
+  bottom: 0;
+  margin: auto;
+  padding: 4px;
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+  font-size: 0;
+  border-bottom: 1px solid #f7f3e7;
+  border-right: 1px solid #f7f3e7;
+  transform: rotate(135deg);
+}
+
+.menum {
+  opacity: 0;
+  transition: background-color 0.01s ease-out, opacity 0.01s ease-out;
+}
+
+.menum.is-visible {
+  opacity: 1;
+}
+
+.menum.is-visible li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-submenum .menum {
+  background-color: #50705b;
+}
+
+.submenum {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  background-color: #ce2424;
+}
+
+.submenum li {
+  margin-left: 60px;
+}
+
+.hide-submenum {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: calc(568px - 300px);
+  cursor: pointer;
+  background-color: #50705b;
+  border: 1px solid #728b78;
+  margin: 0px;
+  transition: background-color 0.1s ease-out;
+}
+
+.hide-submenum:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0;
+  margin: auto;
+  padding: 4px;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  font-size: 0;
+  border-bottom: 1px solid #f7f3e7;
+  border-right: 1px solid #f7f3e7;
+  transform: rotate(-45deg);
+  left: 0;
+  right: 0px;
+  transition: opacity 0.1s ease-out;
+}
+
+.view-submenum .hide-submenum:hover {
+  background-color: #50705b;
+}
+
+.view-submenum .hide-submenum:hover:before {
+  border-bottom: 2px solid #f7f3e7;
+  border-right: 2px solid #f7f3e7;
+}
+
+.view-submenum .hide-submenum:before {
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
+}
+
+.toggle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 5%;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.toggle span {
+  position: relative;
+  align-self: center;
+  font-size: 0;
+  width: 26px;
+  height: 2px;
+  background-color: #f7f3e7;
+  border-radius: 100px;
+  transition: background-color 0.2s ease-out;
+}
+
+.toggle span:before,
+.toggle span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f3e7;
+  border-radius: 100px;
+  transition: transform .1s ease-out;
+}
+
+.toggle span:before {
+  bottom: calc(100% + 6px);
+}
+
+.toggle span:after {
+  top: calc(100% + 6px);
+}
+
+.is-visible .toggle span {
+  background-color: transparent;
+}
+
+.is-visible .toggle span:before {
+  bottom: auto;
+  transform: rotate(45deg);
+}
+
+.is-visible .toggle span:after {
+  top: auto;
+  transform: rotate(-45deg);
+}
+
+.visually-hidden { /*i dont understand the purpose of this?*/
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#logo-m {
+  display: inline-block;
+  width: 40%;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  vertical-align: middle;
+  margin-right: 10%;
+  z-index: 1000;
+}
+
+.size-m {
+  max-width: 80%;
+  height: auto;
 }
