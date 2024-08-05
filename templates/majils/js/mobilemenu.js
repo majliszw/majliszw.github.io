@@ -45,7 +45,7 @@ function adjustBodyPadding() {
     var sizeM = $('.size-m');
     if (sizeM.length) {
         var sizeMHeight = sizeM.outerHeight();
-        var percentage = 1.5; // 150% of the height, change as needed
+        var percentage = 1.4; // 150% of the height, change as needed
         var padding = sizeMHeight * percentage;
         $('body').css('padding-top', padding + 'px');
     }
