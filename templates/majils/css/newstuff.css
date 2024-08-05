@@ -70,7 +70,7 @@
 }
 
 /* Styles for mobile view */
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     /* Ensure dropdowns span the full width of the screen */
     .menu-dropdown .dropdown {
         top: 0;
@@ -188,7 +188,7 @@ body {
   z-index: 1000; /* Ensures it's above other content */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   body {
     padding-top: 0; /* Reset on mobile to be dynamically set by JavaScript */
   }

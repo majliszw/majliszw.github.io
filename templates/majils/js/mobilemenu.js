@@ -53,7 +53,7 @@ function adjustBodyPadding() {
 
 // Function to check if the device is mobile and adjust body padding
 function checkMobileAndAdjust() {
-    if ($(window).width() <= 767) { // Mobile breakpoint
+    if ($(window).width() <= 800) { // Mobile breakpoint
         adjustBodyPadding();
     } else {
         $('body').css('padding-top', '0'); // Reset padding on non-mobile devices

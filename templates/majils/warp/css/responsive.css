@@ -11,7 +11,7 @@
 .hidden-desktop { display: none; }
 
 /* Only Phones */
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 	.hidden-desktop { display: block; }
 	.hidden-phone { display: none; }
 }
@@ -68,7 +68,7 @@
 	.width50 .width50 { width: 100%; }
 
 	.sidebars-1 #sidebar-a .width100,
-	.sidebars-1 #sidebar-b .width100 { width: 50%; }
+	.sidebars-1 #sidebar-b .width100 { width: 100%; }
 
 	#sidebar-a .width100:nth-child(odd):last-child,
 	#sidebar-b .width100:nth-child(odd):last-child,
