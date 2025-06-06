@@ -18,13 +18,12 @@
 	margin: 4px 2px;
 	cursor: pointer; 
 }
+
 .green-button:hover {
 	background-color: #728b78; 
-}
-
-.green-button:hover a {
 	color: #f7f3e7; 
 }
+
 
 .black-link {
 	color: black
