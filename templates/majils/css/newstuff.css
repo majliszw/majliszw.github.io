@@ -45,6 +45,9 @@
 #header-responsive {
     display: none; /* Initially hide the responsive header */
 }
+.rounded-image {
+  border-radius: 6px;
+}
 
 .menu-toggle {
 	border: 1px solid #728b78;
